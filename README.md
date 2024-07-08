@@ -56,6 +56,7 @@ MainTab:CreateToggle({
     callback = function(state)
         while state == true do
             print("Auto Print Enabled");
+            task.wait(1)
         end
     end
 })
