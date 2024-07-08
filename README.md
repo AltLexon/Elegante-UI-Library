@@ -2,7 +2,7 @@
 
 ## 📜 Module
 ```lua
-local LibraryModule = loadstring(game:HttpGetAsync(""))();
+local LibraryModule = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AltLexon/Elegante-UI-Library/master/run.lua"))();
 ```
 
 ## 📦 Example
@@ -12,7 +12,7 @@ local Players = game:GetService("Players");
 local LocalPlayer = Players.LocalPlayer;
 
 -- Get Library Module
-local LibraryModule = loadstring(game:HttpGetAsync(""))();
+local LibraryModule = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AltLexon/Elegante-UI-Library/master/run.lua"))();
 local Library = LibraryModule.new();
 
 -- Create a new Window
