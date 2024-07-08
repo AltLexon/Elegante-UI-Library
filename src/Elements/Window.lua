@@ -1,7 +1,4 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local UserInputService = game:GetService("UserInputService")
-
-local Flipper = require(ReplicatedStorage.Packages.Flipper);
+local Flipper = require(script.Parent.Parent.Packages.Flipper);
 
 local Tab = require(script.Parent.Tab);
 
@@ -13,9 +10,6 @@ export type WindowData = {
 
     size: UDim2?,
     position: UDim2?,
-    
-    pattern: number?,
-    patternColor: Color3?,
 
     windowTransparency: number?,
 }
@@ -23,19 +17,19 @@ export type WindowData = {
 local Window = {};
 Window.__index = Window;
 
-Window.Instance = nil :: Frame;
+Window.Instance = nil :: Frame | nil;
 
-Window.Tabs = nil :: ScrollingFrame;
+Window.Tabs = nil :: ScrollingFrame | nil;
 Window.SelectedTab = {
     Name = "",
-    Canvas = nil :: CanvasGroup,
+    Canvas = nil :: CanvasGroup | nil,
 }
 Window.TabsMotors = {};
 
-Window.Menu = nil :: Frame;
+Window.Menu = nil :: Frame | nil;
 
-Window.Close = nil :: TextButton;
-Window.Minimize = nil :: TextButton;
+Window.Close = nil :: TextButton | nil;
+Window.Minimize = nil :: TextButton | nil;
 
 Window.Transparency = 0;
 
@@ -74,7 +68,6 @@ function Window.new(data: WindowData)
     Pattern.ScaleType = Enum.ScaleType.Tile;
     Pattern.TileSize = UDim2.fromOffset(30, 50);
     Pattern.ImageTransparency = 0.9;
-    Pattern.ImageColor3 = if data.patternColor then data.patternColor else Color3.fromRGB(106, 106, 106);
     Pattern.ZIndex = 1000;
     Pattern.Parent = Frame;
 

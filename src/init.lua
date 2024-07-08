@@ -1,8 +1,7 @@
-local Players = game:GetService("Players");
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players");
 
-local Flipper = require(ReplicatedStorage.Packages.Flipper)
+local Flipper = require(script.Packages.Flipper);
 
 export type Window = {
     name: string,
@@ -12,9 +11,6 @@ export type Window = {
 
     size: UDim2?,
     position: UDim2?,
-    
-    pattern: number?,
-    patternColor: Color3?,
 
     windowTransparency: number,
 }

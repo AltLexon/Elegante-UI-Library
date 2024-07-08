@@ -6,11 +6,11 @@ export type ButtonData = {
 local Button = {};
 Button.__index = Button;
 
-Button.Instance = nil :: Frame;
+Button.Instance = nil :: Frame | nil;
 Button.Callback = function() end;
 
-Button.Button = nil :: TextButton;
-Button.Icon = nil :: ImageLabel;
+Button.Button = nil :: TextButton | nil;
+Button.Icon = nil :: ImageLabel | nil;
 
 function Button.new(data: ButtonData)
     local self = setmetatable({}, Button);

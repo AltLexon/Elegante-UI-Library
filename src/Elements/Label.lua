@@ -6,9 +6,9 @@ export type LabelData = {
 local Label = {};
 Label.__index = Label;
 
-Label.Instance = nil :: Frame;
+Label.Instance = nil :: Frame | nil;
 
-Label.Label = nil :: TextLabel;
+Label.Label = nil :: TextLabel | nil;
 Label.Connections = {} :: {RBXScriptConnection} | {};
 
 function Label.new(data: LabelData)

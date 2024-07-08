@@ -37,9 +37,9 @@ export type LabelData = {
 local Tab = {};
 Tab.__index = Tab;
 
-Tab.List = nil :: ScrollingFrame;
-Tab.Instance = nil :: Frame;
-Tab.Button = nil :: Frame;
+Tab.List = nil :: ScrollingFrame | nil;
+Tab.Instance = nil :: Frame | nil;
+Tab.Button = nil :: Frame | nil;
 
 function Tab.new(data: TabData)
     local self = setmetatable({}, Tab);

@@ -7,10 +7,10 @@ export type TextBoxData = {
 local TextBox = {};
 TextBox.__index = TextBox;
 
-TextBox.Instance = nil :: Frame;
+TextBox.Instance = nil :: Frame | nil;
 TextBox.Callback = function() end;
 
-TextBox.Button = nil :: TextButton;
+TextBox.Button = nil :: TextButton | nil;
 
 TextBox.Value = "" :: string;
 

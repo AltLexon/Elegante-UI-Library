@@ -1,6 +1,4 @@
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
-local Flipper = require(ReplicatedStorage.Packages.Flipper);
+local Flipper = require(script.Parent.Parent.Packages.Flipper);
 
 local Module = {};
 

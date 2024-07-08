@@ -7,11 +7,11 @@ export type ToggleData = {
 local Toggle = {};
 Toggle.__index = Toggle;
 
-Toggle.Instance = nil :: Frame;
+Toggle.Instance = nil :: Frame | nil;
 Toggle.Callback = function() end;
 
-Toggle.Button = nil :: TextButton;
-Toggle.Icon = nil :: ImageLabel;
+Toggle.Button = nil :: TextButton | nil;
+Toggle.Icon = nil :: ImageLabel | nil;
 
 Toggle.State = false;
 
