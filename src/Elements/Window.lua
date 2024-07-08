@@ -67,7 +67,7 @@ function Window.new(data: WindowData)
     Pattern.Image = "rbxassetid://2151782136";
     Pattern.ScaleType = Enum.ScaleType.Tile;
     Pattern.TileSize = UDim2.fromOffset(30, 50);
-    Pattern.ImageTransparency = 0.9;
+    Pattern.ImageTransparency = 0.95;
     Pattern.ZIndex = 1000;
     Pattern.Parent = Frame;
 

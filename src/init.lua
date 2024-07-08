@@ -50,9 +50,8 @@ function Library.new()
     local self = setmetatable({}, Library);
 
     self.Screen = Instance.new("ScreenGui");
-    self.Screen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
-
     self.Screen.Name = "AltLexon's UI";
+    self.Screen.ZIndexBehavior = Enum.ZIndexBehavior.Global;
 
     self.Connection = UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
         if gameProcessedEvent or self.Screen == nil then
