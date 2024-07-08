@@ -115,4 +115,4 @@ MainTab:CreateLabel({
             * CreateLabel(**{text}**)
 <br>
 <br>
-#### Made by **[@altlexon](https://www.roblox.com/users/2836896939/profile)**
+### Made by [@altlexon](https://www.roblox.com/users/2836896939/profile)
