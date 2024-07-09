@@ -1,105 +1,22 @@
 # Elegante UI Library
 
 ## 📜 Module
-```lua
-local LibraryModule = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AltLexon/Elegante-UI-Library/master/run.lua"))();
-```
+- ### latest version
+    ```lua
+    local LibraryModule = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AltLexon/Elegante-UI-Library/master/run.lua"))();
+    ```
+- ### get version
+    ```lua
+    local data = { version = "1.0.0" };
+
+    local LibraryModule = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AltLexon/Elegante-UI-Library/master/run.lua"))(data);
+    ```
+    
 
 ## 📦 Example
+click [here](https://raw.githubusercontent.com/AltLexon/Elegante-UI-Library/master/example.lua) to see the example.
 ```lua
-local Players = game:GetService("Players");
-
-local LocalPlayer = Players.LocalPlayer;
-
--- Get Library Module
-local LibraryModule = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AltLexon/Elegante-UI-Library/master/run.lua"))();
-local Library = LibraryModule.new();
-
--- Create a new Window
---[[
-local Window = Library:CreateWindow({
-    name: string,
-    color: Color3?,
-    corner: number?,
-    cornerColor: Color3?,
-
-    size: UDim2?,
-    position: UDim2?,
-
-    windowTransparency: number?,
-})]]
-
-local Window = Library:CreateWindow({
-    name = "Elegante UI Library",
-})
-
--- Window Toggle
-Window:Show();
-Window:Hide();
-
--- Create a new Tab
--- Window:CreateTab(name: string, icon: number?)
-
-local MainTab = Window:CreateTab("Main", 14187686429);
-local Settings = Window:CreateTab("Settings", 11293977610);
-
---[[
-MainTab:CreateToggle({
-    title: string,
-    default: boolean?,
-    callback: (state: boolean) -> any
-});
-]]
-
-MainTab:CreateToggle({
-    title = "Auto Print",
-    callback = function(state)
-        while state == true do
-            print("Auto Print Enabled");
-            task.wait(1)
-        end
-    end
-})
-
---[[
-MainTab:CreateButton({
-    title: string,
-    callback: (state: boolean) -> any,
-})
-]]
-
-MainTab:CreateButton({
-    title = "Print",
-    callback = function(state)
-        print("Hello World!")
-    end
-})
-
---[[
-MainTab:CreateTextBox({
-    title: string,
-    default: string?,
-    callback: (value: string) -> any,
-})
-]]
-
-MainTab:CreateTextBox({
-    title = "Print Input",
-    default = "Insert a text",
-    callback = function(value)
-        print("Input:", value);
-    end
-})
-
---[[
-MainTab:CreateLabel({
-    text: string,
-})
-]]
-
-MainTab:CreateLabel({
-    text = "Welcome, " .. LocalPlayer.DisplayName
-})
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/AltLexon/Elegante-UI-Library/master/example.lua"))();
 ```
 
 ## 📃 Documentation
