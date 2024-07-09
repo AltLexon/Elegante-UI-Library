@@ -8,6 +8,7 @@ local Library = LibraryModule.new();
 
 local Window = Library:CreateWindow({
     name = "Elegante UI Library",
+    color = Color3.fromRGB(30, 30, 30)
 })
 
 local MainTab = Window:CreateTab("Main", 14187686429);
@@ -42,6 +43,10 @@ MainTab:CreateLabel({
     text = "Welcome, " .. LocalPlayer.DisplayName
 })
 
+Settings:CreateLabel({
+    text = "Script made by @altlexon"
+})
+
 task.wait(1);
 
-Window:Show();
+Library:Show();

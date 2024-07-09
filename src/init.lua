@@ -50,8 +50,8 @@ function Library.new()
     local self = setmetatable({}, Library);
 
     self.Screen = Instance.new("ScreenGui");
-    self.Screen.Name = "AltLexon's UI";
-    self.Screen.ZIndexBehavior = Enum.ZIndexBehavior.Global;
+    self.Screen.Name = "Elegante's UI";
+    self.Screen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
 
     self.Connection = UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
         if gameProcessedEvent or self.Screen == nil then
@@ -81,11 +81,11 @@ function Library:CreateWindow(data: Window)
 
     self.Window.Close.Activated:Connect(function()
         self:Hide();
-        self.Screen = nil;
 
         task.delay(1, function()
             self.Window:Destroy(self.Screen :: any);
             self.Connection:Disconnect();
+            self.Screen = nil;
         end)
     end)
 
