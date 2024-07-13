@@ -14,19 +14,24 @@ local Window = Library:CreateWindow({
 local MainTab = Window:CreateTab("Main", 14187686429);
 local Settings = Window:CreateTab("Settings", 11293977610);
 
+local AutoPrint = false;
 MainTab:CreateToggle({
     title = "Auto Print",
     callback = function(state)
-        while state == true do
-            print("Auto Print Enabled");
-            task.wait(1)
-        end
+        AutoPrint = state;
     end
 })
 
+task.spawn(function()
+    while AutoPrint == true do
+        print("Auto Print Enabled");
+        task.wait(1)
+    end
+end)
+
 MainTab:CreateButton({
     title = "Print",
-    callback = function(state)
+    callback = function()
         print("Hello World!")
     end
 })
